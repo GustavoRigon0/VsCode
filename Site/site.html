@@ -1,0 +1,58 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tingabetismo</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<header>
+    <div id="menu-icon" onclick="toggleMenu()">☰</div>
+    <div id="side-menu">
+        <a href="#"><img src="icone_copia.png" alt="perfil"> Perfil</a>
+        <a href="site.html" id="exercicios"><img id="controle" src="OIG3-removebg-preview.png" alt="Exercicios">Exercicios</a>
+        <a href="#"><img src="tarefas_copia.png" alt="aulas">Aulas</a>
+    </div>
+</header>
+<body>
+    <div class="video-overlay" id="videoOverlay"></div>
+    <video id="myVideo" src="Introducao.mp4" controls style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999;" onended="hideVideo()"></video>
+    
+    <div class="exercise-tree">
+        
+        <div class="video-button">
+            <button onclick="playVideo()">
+                <img src="video.png" alt="Play Video" style="width: 80px; height: 80px;">
+            </button>
+        </div>
+
+        <div class="exercise-level" id="level-1">
+          <button class="exercise" onclick="playAudioAndRedirect('audio1', 'exercicio1.html')">1⁰ Exercicio</button>
+          <audio id="audio1" src="1.mp3"></audio>
+        </div>
+        <div class="exercise-level" id="level-2">
+          <button class="exercise locked" onclick="playAudioAndUnlockNext('audio2', 3)" disabled>2⁰ Exercicio</button>
+          <audio id="audio2" src="2.mp3"></audio>
+        </div>
+        <div class="exercise-level" id="level-3">
+          <button class="exercise locked" onclick="playAudioAndUnlockNext('audio3', 4)" disabled>3⁰ Exercicio</button>
+          <audio id="audio3" src="3.mp3"></audio>
+        </div>
+        <div class="exercise-level" id="level-4">
+          <button class="exercise locked" onclick="playAudioAndComplete('audio4')" disabled>4⁰ Exercicio</button>
+          <audio id="audio4" src="4.mp3"></audio>
+        </div>
+        
+        <div id="completion-message" style="display: none; margin-top: 20px; font-size: 24px; color: green;">
+          Parabéns, você completou todos os exercícios!
+          <audio id="fim-audio" src="fim.mp3"></audio>
+        </div>
+      </div>
+    
+</body>
+<footer>
+    <div>
+        
+    </div>
+</footer>
+<script src="site.js"></script>
+</html>

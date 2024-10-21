@@ -1,0 +1,45 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+    <link rel="stylesheet" href="site.css"> <!-- Mantém o mesmo CSS -->
+</head>
+<header>
+    <div id="menu-icon" onclick="toggleMenu()">☰</div>
+    <div id="side-menu">
+        <a href="#"><img src="icone_copia.png" alt="perfil"> Perfil</a>
+        <a href="site.html" id="exercicios" class="active"><img id="controle" src="OIG3-removebg-preview.png" alt="Exercicios"> Exercícios</a>
+        <a href="#"><img src="tarefas_copia.png" alt="aulas">Aulas</a>
+    </div>
+</header>
+<body>
+    <div class="content">
+        <h1 style="display: none;">Exercício 1</h1>
+        <audio id="clickAudio" src="an.mp3"></audio> <!-- Áudio da foto -->
+        <img src="OIG2.jpeg" alt="Imagem do Exercício" class="exercise-image" onclick="playClickAudio()">
+
+        <div class="options">
+            <div class="option" data-answer="a" onclick="playAnswerAudio('audioA', this)">A</div>
+            <div class="option" data-answer="ão" onclick="playAnswerAudio('audioAtil', this)">ÃO</div>
+            <div class="option" data-answer="an" onclick="playAnswerAudio('audioAcirc', this)">AN</div>
+            <div class="option" data-answer="ã" onclick="playAnswerAudio('audioAgra', this)">Ã</div>
+        </div>
+        
+        <button id="submit-btn" onclick="submitAnswer()"><img src="enviar_copia.png" alt="Submeter Resposta" id="enviarCopia" style="width: 50px; height: 50px;"></button>
+        <audio id="audioA" src="a.mp3"></audio> <!-- Áudio para a resposta A -->
+        <audio id="audioAtil" src="ao.mp3"></audio> <!-- Áudio para a resposta Ã -->
+        <audio id="audioAcirc" src="an.mp3"></audio> <!-- Áudio para a resposta Â -->
+        <audio id="audioAgra" src="tio.mp3"></audio> <!-- Áudio para a resposta Á -->
+    </div>
+</body>
+<footer>
+    <div>
+        <!-- Conteúdo do footer, se necessário -->
+    </div>
+</footer>
+<script src="site.js"></script> <!-- Mantém o mesmo JS -->
+<script>
+
+</script>
+</html>
